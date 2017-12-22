@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"
+            class="lsotnk.xbase.launching.internal.ui.EObjectNodeLaunchableAdapterFactory">
+         <adapter
+               type="org.eclipse.debug.ui.actions.ILaunchable">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"
+            class="lsotnk.xbase.launching.internal.ui.EObjectNodeResourceAdapterFactory">
+         <adapter
+               type="org.eclipse.core.resources.IResource">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"
+            class="lsotnk.xbase.launching.internal.ui.EObjectNodeJavaElementDelegateAdapterFactory">
+         <adapter
+               type="org.eclipse.xtext.xbase.ui.launching.JavaElementDelegateJunitLaunch">
+         </adapter>
+         <adapter
+               type="org.eclipse.xtext.xbase.ui.launching.JavaElementDelegateMainLaunch">
+         </adapter>
+      </factory>
+   </extension>
+
+</plugin>
